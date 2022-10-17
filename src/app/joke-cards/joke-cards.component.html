@@ -1,0 +1,22 @@
+<div class="material-card">
+  <mat-card>
+    <mat-card-title class="card-title">Chuck Norris Jokes</mat-card-title>
+    <mat-card-subtitle class="card-subtitle">Click the <mat-icon class="saved-icon">favorite</mat-icon> button to save your favorite jokes!
+    </mat-card-subtitle>
+    <mat-card-content class="card-joke">
+      <p class="joke-text">{{getJoke()?.value}}</p>
+    </mat-card-content>
+    <mat-card-actions class="pad">
+      <div>
+        <p class="saved-message">{{save_confirmation}}</p>
+        <button class="save-joke" mat-fab color="primary" (click)="saveJoke()">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+      <button class="next-joke" mat-fab color="warn" (click)="loadJoke()">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card-footer class="material-footer">Try another!</mat-card-footer>
+  </mat-card>
+</div>
